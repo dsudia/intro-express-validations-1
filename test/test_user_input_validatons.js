@@ -8,22 +8,22 @@ describe('User Validations', function () {
     it('Name cannot be blank', function (done) {
       validate.nameIsNotBlank.should.be.a('function');
       assert.equal(validate.nameIsNotBlank('   '), 'Name cannot be blank');
-      assert.equal(validate.nameIsNotBlank('George Orwell'), true);
+      assert.equal(validate.nameIsNotBlank('George Orwell'), '');
       done();
     });
   });
   describe('Email is Valid', function () {
     xit('should not be blank', function (done) {
-      validate.emailIsNotBlank.should.be.a('function');
-      assert.equal(validate.emailIsNotBlank('    '), 'Email is invalid')
-      assert.equal(validate.emailIsNotBlank('me@me.com'), true)
+      validate.emailIsValid.should.be.a('function');
+      assert.equal(validate.emailIsValid('    '), 'Email is invalid')
+      assert.equal(validate.emailIsValid('me@me.com'), '')
       done();
     });
   });
   describe('Phone Number is Valid', function () {
     xit('should not be blank', function (done) {
-      validate.phoneNumberIsValid.should.be.a('function');
-      assert.equal(validate.phoneNumberIsValid('  '), 'Phone number is invalid');
+      validate.phoneIsValid.should.be.a('function');
+      assert.equal(validate.phoneIsValid('  '), 'Phone number is invalid');
       done();
     });
   });
