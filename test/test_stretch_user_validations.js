@@ -5,7 +5,7 @@ var validate = require('../lib/validations');
 
 describe('User Validations', function () {
   describe('Name is Valid', function() {
-    it('Name cannot be blank', function (done) {
+    xit('Name cannot be blank', function (done) {
       validate.nameIsNotBlank.should.be.a('function');
       assert.equal(validate.nameIsNotBlank('   '), 'Name cannot be blank');
       assert.equal(validate.nameIsNotBlank('George Orwell'), true);
