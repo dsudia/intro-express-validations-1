@@ -41,13 +41,13 @@ describe('User Validations', function () {
         assert.equal(validate.phoneIsValid('  '), 'Phone number is invalid');
         done();
       });
-      xit('should have enough digits', function (done) {
+      it('should have enough digits', function (done) {
         validate.phoneIsValid.should.be.a('function');
         assert.equal(validate.phoneIsValid('123555234'), 'Phone number is invalid');
         assert.equal(validate.phoneIsValid('1235552345'), '');
         done();
       });
-      xit('should accept dashes in input', function (done) {
+      it('should accept dashes in input', function (done) {
         validate.phoneIsValid.should.be.a('function');
         assert.equal(validate.phoneIsValid('123-555-2345'), '');
         done();
